@@ -1,0 +1,20 @@
+.change{
+  color: #000;
+  padding: 15px;
+  border: 10px solid #000;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.button-box{
+  margin: 30px;
+  display: flex;
+}
+
+.button{
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
