@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+/* template.html */
+.container{
+  margin: 10px auto;
+  padding: 20px 10px;
+  /* 背景色は下記カラースタイルクラスがある為そちらを参照 */
+}
+
+.box{
+  background-color: rgb(248, 248, 248);
+  padding: 10px 10px 20px 10px;
+  font-size: 12px;
+}
+
+
 /* index.html */
 .change{
   color: #000;
@@ -91,18 +105,6 @@
 
 
 /* st_e_learning.html */
-.container{
-  margin: 10px auto;
-  padding: 20px 10px;
-  /* 背景色は下記カラースタイルクラスがある為そちらを参照 */
-}
-
-.box{
-  background-color: rgb(248, 248, 248);
-  padding: 10px 10px 20px 10px;
-  font-size: 12px;
-}
-
 .title{
   margin: 0 0 0 10px;
   font-size: 2.4em;
@@ -156,6 +158,10 @@
   font-size: 3.0em;
   font-weight: bold;
 }
+
+
+/* js_todo_mooz.html */
+
 
 
 /***** color-class *****************************************************************************/
