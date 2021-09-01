@@ -161,7 +161,13 @@
 
 
 /* js_todo_mooz.html */
+.todo{
+  font-size: 20px;
+}
 
+.todo_done{
+  text-decoration: line-through;
+}
 
 
 /***** color-class *****************************************************************************/
