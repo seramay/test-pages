@@ -6,13 +6,13 @@ addTodoButton.addEventListener('click', () => {
   const text = input.value;
 
   const li = document.createElement('li');
-  li.innerText = text
+  li.innerText = text + " ";
   li.classList.add('todo');
 
   const doneButton = document.createElement('button');
   doneButton.innerText = 'done'
   doneButton.classList.add('done_button');
-  
+
   doneButton.addEventListener('click', () => {
     const list = doneButton.closest('li');
     list.classList.add('todo_done');
@@ -20,4 +20,5 @@ addTodoButton.addEventListener('click', () => {
 
   todoList.appendChild(li);
   li.appendChild(doneButton);
+  input.value = ""
 })
