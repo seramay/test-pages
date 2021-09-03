@@ -13,8 +13,15 @@ const addTodoButton = document.querySelector('#add_button');
 addTodoButton.addEventListener('click', () => {
   const input = document.querySelector('input');
   const text = input.value;
+
   const li = document.createElement('li');
   li.innerText = text
   li.classList.add('todo');
+
+  const doneButton = document.createElement('button');
+  doneButton.innerText = 'done'
+  doneButton.classList.add('done_button');
+
   todoList.appendChild(li);
+  li.appendChild(doneButton);
 })
