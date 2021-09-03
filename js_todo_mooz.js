@@ -5,20 +5,27 @@ addTodoButton.addEventListener('click', () => {
   const input = document.querySelector('input');
   const text = input.value;
 
-  const li = document.createElement('li');
-  li.innerText = text + " ";
-  li.classList.add('todo');
+  if (text === "") {
+    alert("何も入力されていません");
 
-  const doneButton = document.createElement('button');
-  doneButton.innerText = 'done'
-  doneButton.classList.add('done_button');
+  } else {
 
-  doneButton.addEventListener('click', () => {
-    const list = doneButton.closest('li');
-    list.classList.add('todo_done');
-  })
+    const li = document.createElement('li');
+    li.innerText = text + " ";
+    li.classList.add('todo');
+  
+    const doneButton = document.createElement('button');
+    doneButton.innerText = 'done'
+    doneButton.classList.add('done_button');
+  
+    doneButton.addEventListener('click', () => {
+      const list = doneButton.closest('li');
+      list.classList.add('todo_done');
+    })
+  
+    todoList.appendChild(li);
+    li.appendChild(doneButton);
+    input.value = ""
+  }
 
-  todoList.appendChild(li);
-  li.appendChild(doneButton);
-  input.value = ""
 })
