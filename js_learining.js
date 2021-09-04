@@ -17,3 +17,17 @@ for (let i = 0; i < termTitle.length; i++) {
   termTitle[i].addEventListener("click", toggle);
 }
 
+
+
+
+// document.write でHTMLへ出力した文章はHTMLファイルで挿入している<script>の読み込み位置によって決まる
+document.write("↩️");
+
+
+// CodePenでサイトに埋め込み
+var x = 10;
+console.log(x);
+x++;
+console.log(x);
+++x;
+console.log(x);
