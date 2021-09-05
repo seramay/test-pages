@@ -23,7 +23,12 @@
   <a href="index.html">トップへ</a>
   <script>
     document.write("↩️");
-    document.write("<p>今日のあなたの運勢は、ぽん吉です</p>");
+
+    let kujis = ['大吉', '中吉', '小吉', '末吉', 'ぽん吉', '凶', '大凶'];
+    // random()では1などの正数の値は振られないので配列数の *7 にして切り捨てすることで0〜6の計算結果が得られる。
+    let kuji = Math.floor(Math.random() * 7);
+
+    document.write("<p>今日のあなたの運勢は、" + kujis[kuji] + "です</p>");
   </script>
 </body>
 </html>
