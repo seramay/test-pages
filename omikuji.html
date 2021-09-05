@@ -11,10 +11,14 @@
       background-color: #dff;
     }
 
-    p{
+    h2{
       font-size: 1.6em;
       text-align: center;
       margin-top: 100px;
+    }
+
+    p{
+      text-align: center;
     }
   </style>
 </head>
@@ -24,10 +28,35 @@
   <script>
     document.write("↩️");
 
-    let kujis = ['大吉', '中吉', '小吉', '末吉', 'ぽん吉', '凶', '大凶'];
-    let kuji = Math.floor(Math.random() * kujis.length);
+    let lists = ['大吉', '中吉', '小吉', '末吉', 'ぽん吉', '凶', '大凶'];
+    
+    let kuji = Math.floor(Math.random() * lists.length);
+    document.write("<h2>今日のあなたの運勢は「" + lists[kuji] + "」です</h2>");
+    
+    let kuji_result_sum = new Array();
+    for (let i = 0; i < lists.length; i++) {
+      kuji_result_sum.push(0);
+    }
+    
+    for (let i = 0; i < 10000; i++ ) {
+      let culc = Math.floor(Math.random() * lists.length);
+      for (let i = 0; i < lists.length; i++) {
+        if (i === culc) {
+          kuji_result_sum[culc] += 1;
+        }
+      }
+    }
 
-    document.write("<p>今日のあなたの運勢は、" + kujis[kuji] + "です</p>");
+    let result_total = 0;
+    for (let i = 0; i < kuji_result_sum.length; i++) {
+      result_total += kuji_result_sum[i];
+    }
+
+    document.write(`<p>同時に${result_total}回くじを引いた結果は...</p>`);
+    for (let i = 0; i < lists.length; i++) {
+      document.write(`<p>${lists[i]}： ${kuji_result_sum[i]}回</p>`);
+    }
+
   </script>
 </body>
 </html>
