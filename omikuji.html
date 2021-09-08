@@ -41,6 +41,9 @@
       kuji_result_sum.push(0);
     }
     
+    // 複数の計算結果をを出す意図
+    // このおみくじが確率調整されていないものであると証明する為。
+    // その為に、上記に記述した通り同じ構文で処理する必要がある
     for (let i = 0; i < 10000; i++ ) {
       let culc = Math.floor(Math.random() * lists.length);
       for (let i = 0; i < lists.length; i++) {
