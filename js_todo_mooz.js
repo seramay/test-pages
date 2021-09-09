@@ -6,7 +6,7 @@ addTodoButton.addEventListener('click', () => {
   const text = input.value;
 
   if (text === "") {
-    alert("何も入力されていません");
+    window.alert("何も入力されていません");
 
   } else {
 

@@ -13,4 +13,4 @@ document.getElementsByTagName('button')[1].textContent = answers[1];
 document.getElementsByTagName('button')[2].textContent = answers[2];
 document.getElementsByTagName('button')[3].textContent = answers[3];
 
-// クリックイベントで答え合わせ
+// クリックイベントで答え合わせ 15:46
