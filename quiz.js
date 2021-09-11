@@ -9,12 +9,12 @@ const correct = 'A型'
 
 // HTML要素は名前の前に$つけると分かりやすい
 const $button = document.getElementsByTagName('button');
+let buttonLength = $button.length;
 
 // クイズの出題文と解答用ボタンのテキスト代入の関数
 const setupQuiz = () => {
   document.querySelector('#js-question').textContent = question; 
   let buttonIndex = 0;
-  let buttonLength = $button.length;
   while (buttonIndex < buttonLength) {
   $button[buttonIndex].textContent = answers[buttonIndex];
   buttonIndex++;
@@ -34,18 +34,10 @@ const clickHandler = (e) => {
   }
 }
 
-$button[0].addEventListener('click', (e) => {
-  clickHandler(e);
-})
-
-$button[1].addEventListener('click', (e) => {
-  clickHandler(e);
-})
-
-$button[2].addEventListener('click', (e) => {
-  clickHandler(e);
-})
-
-$button[3].addEventListener('click', (e) => {
-  clickHandler(e);
-})
+let handleIndex = 0;
+while (handleIndex < buttonLength) {
+  $button[handleIndex].addEventListener('click', (e) => {
+    clickHandler(e);
+  })
+  handleIndex++;
+}
