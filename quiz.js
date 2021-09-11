@@ -70,6 +70,10 @@ const clickHandler = (e) => {
   } else {
     // 問題が全て終わった場合
     window.alert(`全問終了しました。あなたの正解数は${score}/${quizLength}です！`);
+
+    // 終了後、放置するのも寂しいので最初に戻す
+    quizIndex = 0;
+    setupQuiz();
   }
 
 }
