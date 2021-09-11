@@ -7,45 +7,45 @@ const answers = [
 ];
 const correct = 'A型'
 
-document.querySelector('#js-question').textContent = question; 
-
-// ボタン要素を取得、$をつけてHTMLオブジェクトが入っている変数として識別
+// HTML要素は名前の前に$つけると分かりやすい
 const $button = document.getElementsByTagName('button');
-$button[0].textContent = answers[0];
-$button[1].textContent = answers[1];
-$button[2].textContent = answers[2];
-$button[3].textContent = answers[3];
 
-// クリックイベントで答え合わせ
-// ※ 要リファクタリング
-$button[0].addEventListener('click', () => {
-  if(correct === $button[0].textContent){
+// クイズの出題文と解答用ボタンのテキスト代入の関数
+const setupQuiz = () => {
+  document.querySelector('#js-question').textContent = question; 
+  let buttonIndex = 0;
+  let buttonLength = $button.length;
+  while (buttonIndex < buttonLength) {
+  $button[buttonIndex].textContent = answers[buttonIndex];
+  buttonIndex++;
+  }
+}
+
+// クイズ関数呼び出し
+setupQuiz();
+
+// クリックイベントの条件文を関数化
+const clickHandler = (e) => {
+  // console.log(e); // PointerEventオブジェクトのデバッグ表示。targetでこのボタン要素がハイライトされるのが分かる。
+  if(correct === e.target.textContent){
     window.alert('正解！');
   } else {
     window.alert('不正解！');
   }
+}
+
+$button[0].addEventListener('click', (e) => {
+  clickHandler(e);
 })
 
-$button[1].addEventListener('click', () => {
-  if(correct === $button[1].textContent){
-    window.alert('正解！');
-  } else {
-    window.alert('不正解！');
-  }
+$button[1].addEventListener('click', (e) => {
+  clickHandler(e);
 })
 
-$button[2].addEventListener('click', () => {
-  if(correct === $button[2].textContent){
-    window.alert('正解！');
-  } else {
-    window.alert('不正解！');
-  }
+$button[2].addEventListener('click', (e) => {
+  clickHandler(e);
 })
 
-$button[3].addEventListener('click', () => {
-  if(correct === $button[3].textContent){
-    window.alert('正解！');
-  } else {
-    window.alert('不正解！');
-  }
+$button[3].addEventListener('click', (e) => {
+  clickHandler(e);
 })
