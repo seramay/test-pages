@@ -1,11 +1,37 @@
-const question = '日本で最も多いとされている血液型は次のうちどれ？';
-const answers = [
-  'A型',
-  'B型',
-  'O型',
-  'AB型'
-];
-const correct = 'A型'
+const quiz = [
+  {
+    question: '日本で最も多いとされている血液型は次のうちどれ？',
+    answers: [
+      'A型',
+      'B型',
+      'O型',
+      'AB型'
+    ],
+    correct: 'A型'
+  }, {
+    question: '世界で最も多いとされている血液型は次のうちどれ？',
+    answers: [
+      'A型',
+      'B型',
+      'O型',
+      'AB型'
+    ],
+    correct: 'O型'
+  }, {
+    question: 'この中で日本で最も自給率の低い食品はどれ？',
+    answers: [
+      'はちみつ',
+      'ごま',
+      'パン用小麦',
+      '大豆'
+    ],
+    correct: 'ごま'
+  }
+]
+
+
+const quizLength = quiz.length;
+let quizIndex = 0;
 
 // HTML要素は名前の前に$つけると分かりやすい
 const $button = document.getElementsByTagName('button');
@@ -13,10 +39,10 @@ let buttonLength = $button.length;
 
 // クイズの出題文と解答用ボタンのテキスト代入の関数
 const setupQuiz = () => {
-  document.querySelector('#js-question').textContent = question; 
+  document.querySelector('#js-question').textContent = quiz[quizIndex].question; 
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
-  $button[buttonIndex].textContent = answers[buttonIndex];
+  $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
   buttonIndex++;
   }
 }
@@ -27,11 +53,23 @@ setupQuiz();
 // クリックイベントの条件文を関数化
 const clickHandler = (e) => {
   // console.log(e); // PointerEventオブジェクトのデバッグ表示。targetでこのボタン要素がハイライトされるのが分かる。
-  if(correct === e.target.textContent){
+  if(quiz[quizIndex].correct === e.target.textContent){
     window.alert('正解！');
   } else {
     window.alert('不正解！');
   }
+
+  // 解答後に次のクイズに行くためwhile文用の条件変数に加算
+  quizIndex++;
+
+  if (quizIndex < quizLength) {
+    setupQuiz();
+
+  } else {
+    // 問題が全て終わった場合
+    window.alert('全問終了しました。');
+  }
+
 }
 
 let handleIndex = 0;
