@@ -22,7 +22,7 @@ const quiz = [
     answers: [
       'はちみつ',
       'ごま',
-      'パン用小麦',
+      'ベーコン用豚肉',
       '大豆'
     ],
     correct: 'ごま'
@@ -32,6 +32,7 @@ const quiz = [
 
 const quizLength = quiz.length;
 let quizIndex = 0;
+let score = 0;
 
 // HTML要素は名前の前に$つけると分かりやすい
 const $button = document.getElementsByTagName('button');
@@ -55,6 +56,7 @@ const clickHandler = (e) => {
   // console.log(e); // PointerEventオブジェクトのデバッグ表示。targetでこのボタン要素がハイライトされるのが分かる。
   if(quiz[quizIndex].correct === e.target.textContent){
     window.alert('正解！');
+    score++;
   } else {
     window.alert('不正解！');
   }
@@ -67,7 +69,7 @@ const clickHandler = (e) => {
 
   } else {
     // 問題が全て終わった場合
-    window.alert('全問終了しました。');
+    window.alert(`全問終了しました。あなたの正解数は${score}/${quizLength}です！`);
   }
 
 }
