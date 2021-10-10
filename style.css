@@ -104,62 +104,6 @@
 }
 
 
-/* st_e_learning.html */
-.title{
-  margin: 0 0 0 10px;
-  font-size: 2.4em;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-}
-
-.title_chip{
-  margin-left: 1%;
-  font-size: 0.6em;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.title_icon{
-  transition-duration: 0.3s;
-  cursor: pointer;
-}
-
-.title_icon.title_icon-rotate{
-  transform: rotateX(180deg);
-}
-
-.commentary{
-  margin: 0 0 0 30px;
-  font-size: 1.4em;
-  letter-spacing: 0.5px;
-  transition-duration: 0.3s;
-}
-
-.disp_block{
-  padding: 10px 0;
-  line-height: normal;
-  height: auto;
-  opacity: 1;
-}
-
-.disp_none{
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.attention{
-  color: #d00;
-}
-
-.term{
-  margin: 15px 0 30px 0;
-  font-size: 3.0em;
-  font-weight: bold;
-}
-
-
 /* js_todo_mooz.html */
 .todo{
   font-size: 20px;
