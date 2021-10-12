@@ -3,7 +3,7 @@
 
 
 :root{
-  --yellow: #f9ca24;
+  --pink: #da1d91;
 }
 
 *{
@@ -19,7 +19,7 @@
 }
 
 *::selection{
-  background: var(--yellow);
+  background: var(--pink);
   color: #333;
 }
 
@@ -37,7 +37,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-  background: var(--yellow);
+  background: var(--pink);
 }
 
 body{
@@ -66,7 +66,7 @@ header .user img{
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 0.7rem solid var(--yellow);
+  border: 0.7rem solid var(--pink);
 }
 
 
