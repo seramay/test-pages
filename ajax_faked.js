@@ -1,6 +1,13 @@
 $(function(){
-  //ajax_faked.html
   //
+  //ajax_faked.html
+  // inputAreaの文字を送信した際のHTML要素の生成
+  //
+  function buildHTML(text) {
+    var html = `<p>${text}</p>`
+    return html
+  }
+  
   const inputArea = $(".input_area");
   const textOut = $('.text_out');
   const output = '非同期出力もどき: '
