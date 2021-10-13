@@ -69,6 +69,39 @@ header .user img{
   border: 0.7rem solid var(--pink);
 }
 
+header .user .name{
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+header .user .post{
+  font-size: 2rem;
+  color: #eee;
+}
+
+header .navbar{
+  width: 100%;
+}
+
+header .navbar ul{
+  list-style: none;
+  padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+  background: var(--pink);
+}
+
 
 /* template.html */
 .container{
