@@ -6,29 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="stylesheet" href="reset.css"> -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>GitHub Pages Test</title>
 
 </head>
 
 <body>
-  <p class="change">Welcome to GitHub Pages !!</p>
-  <div class="button-box">
-    <button class="button" id="red">red</button>
-    <button class="button" id="green">green</button>
-    <button class="button" id="blue">blue</button>
-  </div>
-  <ul>
-    <li><a href="ajax_faked.html"><button class="button">ajax_faked</button></a></li>
-    <li><a href="js_todo_mooz.html"><button class="button">JS_todo(mooz)</button></a></li>
-    <li><a href="omikuji.html"><button class="button">omikuji-app</button></a></li>
-    <li><a href="quiz.html"><button class="button">quiz</button></a></li>
-    <li><a href="concentration.html"><button class="button">concentration</button></a></li>
-
-  </ul>
-  <!-- li>a>button.button{xxx} -->
-
+  
   <header>
     <div class="user">
       <img src="images/profile.JPG" alt="portrait">
@@ -48,10 +35,83 @@
   </header>
 
 
+  <div id="menu" class="fas fa-bars"></div>
+
+
+  <section class="home" id="home">
+
+    <h3>HI THERE !</h3>
+    <h1>I'm <span>Tak Saka</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure enim rem corporis cumque optio minus beatae suscipit doloribus esse necessitatibus eligendi sed doloremque, molestiae et voluptas culpa dolore, possimus debitis.</p>
+    <a href="#about"><button class="btn">about me<i class="fas fa-user"></i></button></a>
+
+  </section>
+
+
+  <section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> me </h1>
+    <div class="row">
+
+      <div class="info">
+
+        <h3> <span> name : </span> Tak Saka </h3>
+        <h3> <span> age : </span> 36 </h3>
+        <h3> <span> qualification : </span> Examination in Utilization Ability of Data Processing (Jan/'03) </h3>
+        <h3> <span> post : </span> unemployed </h3>
+        <h3> <span> language : </span> japanese </h3>
+        <a href="#"><button class="btn"> download CV <i class="fas fa-download"></i></button></a>
+
+      </div>
+
+      <div class="counter">
+        <div class="box">
+          <span>1+</span>
+          <h3>years of learning</h3>
+        </div>
+        
+        <div class="box">
+          <span>no</span>
+          <h3>experience</h3>
+        </div>
+
+        <div class="box">
+          <span>no</span>
+          <h3>project completed</h3>
+        </div>
+
+        <div class="box">
+          <span>no</span>
+          <h3>clients</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-  <script src="script.js"></script>
+
+
+
+  <!-- init-section -->
+
+  <p class="change">Welcome to GitHub Pages !!</p>
+  <div class="button-box">
+    <button class="button" id="red">red</button>
+    <button class="button" id="green">green</button>
+    <button class="button" id="blue">blue</button>
+  </div>
+  <ul>
+    <li><a href="ajax_faked.html"><button class="button">ajax_faked</button></a></li>
+    <li><a href="js_todo_mooz.html"><button class="button">JS_todo(mooz)</button></a></li>
+    <li><a href="omikuji.html"><button class="button">omikuji-app</button></a></li>
+    <li><a href="quiz.html"><button class="button">quiz</button></a></li>
+    <li><a href="concentration.html"><button class="button">concentration</button></a></li>
+
+  </ul>
+  <!-- li>a>button.button{xxx} -->
+
+  <script src="index.js"></script>
 </body>
 
 </html>
